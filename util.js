@@ -61,7 +61,7 @@ export const getCoordinatesFromItem = (item, accessor, asArray = true) => {
   let coordinates = []
 
   if (typeof accessor === 'string') {
-    coordinates = [item[accessor].longitude, item[accessor].latitude]
+    coordinates = [item.store.longitude, item.store.latitude]
   } else if (typeof accessor === 'function') {
     coordinates = accessor(item)
   }
